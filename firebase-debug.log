@@ -1,0 +1,25 @@
+[debug] [2022-01-19T00:15:16.962Z] ----------------------------------------------------------------------
+[debug] [2022-01-19T00:15:16.967Z] Command:       /usr/bin/node /usr/bin/firebase use --add
+[debug] [2022-01-19T00:15:16.968Z] CLI Version:   10.1.0
+[debug] [2022-01-19T00:15:16.968Z] Platform:      linux
+[debug] [2022-01-19T00:15:16.969Z] Node Version:  v14.18.2
+[debug] [2022-01-19T00:15:16.969Z] Time:          Wed Jan 19 2022 00:15:16 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-01-19T00:15:16.970Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-19T00:15:17.104Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-19T00:15:17.104Z] > authorizing via signed-in user (deniskidagi@gmail.com)
+[debug] [2022-01-19T00:15:17.110Z] > refreshing access token with scopes: []
+[debug] [2022-01-19T00:15:17.111Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-01-19T00:15:17.622Z] <<< HTTP RESPONSE 200 {"date":"Tue, 18 Jan 2022 21:14:44 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-19T00:15:17.840Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2022-01-19T00:15:32.859Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000
+[debug] [2022-01-19T00:15:33.936Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000
+    at Client.doRequest (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:213:19)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:96:20)
+    at async getProjectPage (/usr/lib/node_modules/firebase-tools/lib/management/projects.js:233:17)
+    at async getFirebaseProjectPage (/usr/lib/node_modules/firebase-tools/lib/management/projects.js:250:23)
+    at async listFirebaseProjects (/usr/lib/node_modules/firebase-tools/lib/management/projects.js:281:29)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
